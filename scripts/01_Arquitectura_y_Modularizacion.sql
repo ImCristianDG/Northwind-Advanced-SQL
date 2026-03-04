@@ -22,3 +22,25 @@ SELECT
 FROM Ventas_Detalladas
 GROUP BY Mes
 ORDER BY Mes ASC;
+
+-- MISIÓN 2: PERSISTENCIA DEL MOTOR DE VENTAS
+-- Creamos una vista para reutilizar la lógica de la Misión 1
+
+DROP VIEW IF EXISTS vw_Ventas_Mensuales;
+
+CREATE VIEW vw_Ventas_Mensuales AS
+WITH Ventas_Detalladas AS (
+    SELECT
+        strftime('%Y-%m', o.OrderDate) AS Mes,
+        od.UnitPrice * od.Quantity * (1 - od.Discount) AS Monto_Neto
+    FROM [Order Details] AS od
+    INNER JOIN Orders AS o ON o.OrderID = od.OrderID
+)
+SELECT
+    Mes,
+    ROUND(SUM(Monto_Neto), 2) AS Total_Facturado
+FROM Ventas_Detalladas
+GROUP BY Mes;
+
+-- Comprobación de la vista (Misión 1 & 2 combinadas)
+SELECT * FROM vw_Ventas_Mensuales ORDER BY Mes ASC;
