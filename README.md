@@ -15,6 +15,12 @@ Foco en el uso de **CTEs (Common Table Expressions)** para estructurar consultas
     - `ROUND` para limpieza de datos financieros.
 - Resultado: Una serie de tiempo limpia con 136 registros de ventas mensuales.
 
+### Misión 2: Persistencia con Vistas (VIEWs)
+- Objetivo: Crear una estructura permanente en la base de datos para simplificar futuros análisis.
+- Herramientas utilizadas:`CREATE VIEW` para encapsular la lógica del CTE.
+    - `DROP VIEW IF EXISTS` para asegurar la idempotencia del script.
+- Resultado: Disponibilidad de la vista `vw_Ventas_Mensuales` que abstrae la complejidad de los joins y cálculos iniciales.
+
 --
 
 ## Fase 2: Funciones de Ventana (Window Functions)
