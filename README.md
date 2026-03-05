@@ -30,3 +30,10 @@ Aplicación de **LAG** y **LEAD** para análisis comparativo intermensual y **RA
 
 ## Fase 3: Lógica de Negocio
 Implementación de **CASE WHEN** para segmentación de datos y creación de **Vistas (Views)** para la simplificación de reportes finales.
+
+---
+
+## Estado del Proyecto
+* **Fase 1:** En proceso.
+* **Fase 2:** Pendiente.
+* **Fase 3:** Pendiente.
