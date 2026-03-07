@@ -42,6 +42,6 @@ SELECT
 FROM Ventas_Detalladas
 GROUP BY Mes;
 
--- Comprobación de la vista (Misión 1 & 2 combinadas)
+-- Comprobación de la vista (Misión 1 y 2 combinadas).
 
 SELECT * FROM vw_Ventas_Mensuales ORDER BY Mes ASC;
