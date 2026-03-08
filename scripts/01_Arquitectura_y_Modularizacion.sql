@@ -1,11 +1,11 @@
--- ======================================================
--- PROYECTO: Northwind Advanced SQL
--- FASE 1: Arquitectura y Modularización
--- ======================================================
+--- ======================================================
+--- PROYECTO: Northwind Advanced SQL
+--- FASE 1: Arquitectura y Modularización
+--- ======================================================
 
--- MISIÓN 1: Motor de Ventas Mensuales
--- Objetivo: Extraer el total de ventas mensual normalizado por fecha.
--- Se utiliza un CTE para separar el cálculo del subtotal de la agrupación final.
+--- MISIÓN 1: Motor de Ventas Mensuales
+--- Objetivo: Extraer el total de ventas mensual normalizado por fecha.
+--- Se utiliza un CTE para separar el cálculo del subtotal de la agrupación final.
 
 WITH Ventas_Detalladas AS (
     SELECT
@@ -14,7 +14,7 @@ WITH Ventas_Detalladas AS (
     FROM [Order Details] AS od
     INNER JOIN Orders AS o ON o.OrderID = od.OrderID
 )
--- Consulta final: Agrupa por mes y redondea el resultado a 2 decimales.
+--- Consulta final: Agrupa por mes y redondea el resultado a 2 decimales.
 
 SELECT
     Mes,
@@ -23,8 +23,8 @@ FROM Ventas_Detalladas
 GROUP BY Mes
 ORDER BY Mes ASC;
 
--- MISIÓN 2: PERSISTENCIA DEL MOTOR DE VENTAS
--- Creamos una vista para reutilizar la lógica de la Misión 1
+--- MISIÓN 2: PERSISTENCIA DEL MOTOR DE VENTAS
+--- Creamos una vista para reutilizar la lógica de la Misión 1
 
 DROP VIEW IF EXISTS vw_Ventas_Mensuales;
 
@@ -42,6 +42,6 @@ SELECT
 FROM Ventas_Detalladas
 GROUP BY Mes;
 
--- Comprobación de la vista (Misión 1 y 2 combinadas).
+--- Comprobación de la vista (Misión 1 y 2 combinadas).
 
 SELECT * FROM vw_Ventas_Mensuales ORDER BY Mes ASC;
