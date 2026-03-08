@@ -23,8 +23,8 @@ FROM Ventas_Detalladas
 GROUP BY Mes
 ORDER BY Mes ASC;
 
---- MISIÓN 2: PERSISTENCIA DEL MOTOR DE VENTAS
---- Creamos una vista para reutilizar la lógica de la Misión 1
+--- MISIÓN 2: Persistencia del motor de ventas
+--- Creamos una vista para reutilizar la lógica de la Misión 1.
 
 DROP VIEW IF EXISTS vw_Ventas_Mensuales;
 
