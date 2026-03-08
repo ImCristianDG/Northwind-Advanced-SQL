@@ -21,17 +21,17 @@ Foco en el uso de **CTEs (Common Table Expressions)** para estructurar consultas
     - `DROP VIEW IF EXISTS` para asegurar la idempotencia del script.
 - Resultado: Disponibilidad de la vista `vw_Ventas_Mensuales` que abstrae la complejidad de los joins y cálculos iniciales.
 
---
+---
 
 ## Fase 2: Funciones de Ventana (Window Functions)
 Aplicación de **LAG** y **LEAD** para análisis comparativo intermensual y **RANK** para la generación de ránkings de desempeño.
 
---
+---
 
 ## Fase 3: Lógica de Negocio
 Implementación de **CASE WHEN** para segmentación de datos y creación de **Vistas (Views)** para la simplificación de reportes finales.
 
---
+---
 
 ## Estado del Proyecto
 * **Fase 1:** En proceso.
