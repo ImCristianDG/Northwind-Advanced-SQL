@@ -32,7 +32,10 @@ Aplicación de **LAG** y **LEAD** para análisis comparativo intermensual y **RA
 Implementación de **CASE WHEN** para segmentación de datos y creación de **Vistas (Views)** para la simplificación de reportes finales.
 
 ---
-
+### Misión 4: El "Time Travel" (LAG) ⏳
+- **Objetivo:** Comparar la venta del mes actual con la del mes anterior en una misma fila.
+- **Herramientas utilizadas:** `LAG()` como Window Function.
+- **Resultado:** Se logró visualizar en una sola línea el rendimiento actual vs. el periodo inmediato anterior, base necesaria para el cálculo de KPIs de crecimiento.
 ## Estado del Proyecto
 * **Fase 1:** En proceso.
 * **Fase 2:** Pendiente.
